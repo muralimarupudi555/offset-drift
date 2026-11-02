@@ -155,14 +155,28 @@ def rows_scanned_by_offset(offset: int, page_size: int) -> int:
     return offset + page_size
 
 
-def full_scan_rows_read(rows: int, page_size: int) -> int:
+def full_scan_rows_read(rows: int, page_size: int,
+                        terminating_page: bool = False) -> int:
     """Total rows read to page through a quiet table with OFFSET, which is quadratic.
 
     Summing `offset + page_size` over every page gives roughly `n^2 / (2L) + n`. Keyset
     reads `n`, because each page starts where the last one stopped.
+
+    `terminating_page` counts the query a real paginator has to issue to discover it has
+    finished. When the table divides evenly by the page size, the last full page gives no
+    hint that it is the last, so the loop asks once more and gets nothing back - and the
+    database reads the entire table to hand back that nothing. It is the single most
+    expensive query of the whole scan.
+
+    The default is False because the arithmetic claim is about the pages that returned
+    data. E3 passes True, because E3 measures a real loop, and leaving it out made the
+    measurement disagree with the prediction by exactly one table scan.
     """
     pages = -(-rows // page_size)
-    return sum(rows_scanned_by_offset(p * page_size, page_size) for p in range(pages))
+    total = sum(rows_scanned_by_offset(p * page_size, page_size) for p in range(pages))
+    if terminating_page and rows % page_size == 0:
+        total += rows_scanned_by_offset(pages * page_size, page_size)
+    return total
 
 
 def full_scan_rows_read_keyset(rows: int) -> int:
