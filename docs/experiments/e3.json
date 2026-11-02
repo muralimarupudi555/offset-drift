@@ -1,0 +1,77 @@
+{
+  "experiment": "e3_paging_the_whole_table",
+  "page_size": 50,
+  "sizes": [
+    10000,
+    20000,
+    40000,
+    80000
+  ],
+  "measurements": [
+    {
+      "rows": 10000,
+      "offset_seconds": 0.1506,
+      "keyset_seconds": 0.0245,
+      "offset_pages": 200,
+      "keyset_pages": 200,
+      "offset_rows_read": 1015050,
+      "predicted_offset_rows_read": 1015050,
+      "keyset_rows_read": 10050,
+      "read_amplification": 101.5,
+      "time_ratio": 6.1
+    },
+    {
+      "rows": 20000,
+      "offset_seconds": 0.5107,
+      "keyset_seconds": 0.047,
+      "offset_pages": 400,
+      "keyset_pages": 400,
+      "offset_rows_read": 4030050,
+      "predicted_offset_rows_read": 4030050,
+      "keyset_rows_read": 20050,
+      "read_amplification": 201.5,
+      "time_ratio": 10.9
+    },
+    {
+      "rows": 40000,
+      "offset_seconds": 1.8492,
+      "keyset_seconds": 0.0974,
+      "offset_pages": 800,
+      "keyset_pages": 800,
+      "offset_rows_read": 16060050,
+      "predicted_offset_rows_read": 16060050,
+      "keyset_rows_read": 40050,
+      "read_amplification": 401.5,
+      "time_ratio": 19.0
+    },
+    {
+      "rows": 80000,
+      "offset_seconds": 7.1406,
+      "keyset_seconds": 0.2171,
+      "offset_pages": 1600,
+      "keyset_pages": 1600,
+      "offset_rows_read": 64120050,
+      "predicted_offset_rows_read": 64120050,
+      "keyset_rows_read": 80050,
+      "read_amplification": 801.5,
+      "time_ratio": 32.9
+    }
+  ],
+  "offset_time_growth_per_doubling": [
+    3.39,
+    3.62,
+    3.86
+  ],
+  "keyset_time_growth_per_doubling": [
+    1.92,
+    2.07,
+    2.23
+  ],
+  "offset_scales_quadratically": true,
+  "keyset_scales_linearly": true,
+  "rows_read_matches_the_arithmetic": true,
+  "largest_read_amplification": 801.5,
+  "largest_time_ratio": 32.9,
+  "largest_offset_seconds": 7.1406,
+  "largest_keyset_seconds": 0.2171
+}

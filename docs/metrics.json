@@ -1,0 +1,130 @@
+{
+  "metrics": {
+    "rows": 4000,
+    "page_size": 50,
+    "writes_per_page": 5,
+    "delete_skipped": 330,
+    "delete_skipped_share": 0.09078,
+    "insert_duplicates": 440,
+    "mixed_skipped": 190,
+    "mixed_duplicates": 200,
+    "new_rows_seen": 0,
+    "depth_rows": 1000000,
+    "deepest_depth": 999000,
+    "deepest_offset_ms": 96.3016,
+    "deepest_keyset_ms": 0.3757,
+    "deepest_ratio": 256.32,
+    "per_row_spread": 1.01,
+    "keyset_growth": 1.077,
+    "offset_growth": 33.6,
+    "largest_scan_rows": 80000,
+    "largest_offset_seconds": 7.1406,
+    "largest_keyset_seconds": 0.2171,
+    "largest_read_amplification": 801.5,
+    "largest_time_ratio": 32.9,
+    "tests": 68
+  },
+  "display": {
+    "delete_skipped_share": "9.1%",
+    "deepest_depth": "999,000",
+    "deepest_offset_ms": "96.3",
+    "deepest_keyset_ms": "0.38",
+    "deepest_ratio": "256",
+    "per_row_spread": "1.01",
+    "keyset_growth": "1.08",
+    "offset_growth": "34",
+    "depth_rows": "1,000,000",
+    "largest_scan_rows": "80,000",
+    "largest_offset_seconds": "7.14",
+    "largest_keyset_seconds": "0.22",
+    "largest_read_amplification": "801.5",
+    "largest_time_ratio": "33",
+    "rows": "4000",
+    "page_size": "50",
+    "writes_per_page": "5",
+    "delete_skipped": "330",
+    "insert_duplicates": "440",
+    "mixed_skipped": "190",
+    "mixed_duplicates": "200",
+    "new_rows_seen": "0",
+    "tests": "68"
+  },
+  "anchors": {
+    "rows": [
+      "a table of {} rows"
+    ],
+    "page_size": [
+      "pages of {}"
+    ],
+    "writes_per_page": [
+      "{} writes between pages"
+    ],
+    "delete_skipped": [
+      "{} rows were never returned"
+    ],
+    "delete_skipped_share": [
+      "{} of the table"
+    ],
+    "insert_duplicates": [
+      "returns {} rows twice"
+    ],
+    "mixed_skipped": [
+      "skips {} rows"
+    ],
+    "mixed_duplicates": [
+      "duplicates {}"
+    ],
+    "new_rows_seen": [
+      "sees {} of them"
+    ],
+    "depth_rows": [
+      "a table of {}"
+    ],
+    "deepest_depth": [
+      "depth {}"
+    ],
+    "deepest_offset_ms": [
+      "{} ms"
+    ],
+    "deepest_keyset_ms": [
+      "{} ms"
+    ],
+    "deepest_ratio": [
+      "{} times as long"
+    ],
+    "per_row_spread": [
+      "within {}x"
+    ],
+    "keyset_growth": [
+      "grows {}x"
+    ],
+    "offset_growth": [
+      "grows {}x"
+    ],
+    "largest_scan_rows": [
+      "{} rows takes"
+    ],
+    "largest_offset_seconds": [
+      "{} seconds"
+    ],
+    "largest_keyset_seconds": [
+      "{} seconds"
+    ],
+    "largest_read_amplification": [
+      "{}x the table"
+    ],
+    "largest_time_ratio": [
+      "{}x longer"
+    ],
+    "tests": [
+      "{} tests"
+    ]
+  },
+  "checked_documents": [
+    "README.md",
+    "docs/adr/ADR-001-a-writer-between-pages.md",
+    "docs/adr/ADR-002-which-rows-were-owed-a-sighting.md",
+    "docs/adr/ADR-003-three-measurements-that-were-wrong.md",
+    "docs/adr/ADR-004-what-this-cannot-measure.md"
+  ]
+}

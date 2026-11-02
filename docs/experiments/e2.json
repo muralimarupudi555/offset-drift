@@ -1,0 +1,75 @@
+{
+  "experiment": "e2_the_cost_of_depth",
+  "rows": 1000000,
+  "page_size": 50,
+  "repeats": 15,
+  "depths": [
+    0,
+    10000,
+    100000,
+    250000,
+    500000,
+    999000
+  ],
+  "measurements": [
+    {
+      "depth": 0,
+      "offset_ms": 0.3153,
+      "keyset_ms": 0.5163,
+      "ratio": 0.61,
+      "rows_read_by_offset": 50,
+      "us_per_row_read": 6.3065
+    },
+    {
+      "depth": 10000,
+      "offset_ms": 1.4256,
+      "keyset_ms": 0.2673,
+      "ratio": 5.33,
+      "rows_read_by_offset": 10050,
+      "us_per_row_read": 0.1418
+    },
+    {
+      "depth": 100000,
+      "offset_ms": 9.7343,
+      "keyset_ms": 0.3489,
+      "ratio": 27.9,
+      "rows_read_by_offset": 100050,
+      "us_per_row_read": 0.0973
+    },
+    {
+      "depth": 250000,
+      "offset_ms": 24.173,
+      "keyset_ms": 0.3675,
+      "ratio": 65.77,
+      "rows_read_by_offset": 250050,
+      "us_per_row_read": 0.0967
+    },
+    {
+      "depth": 500000,
+      "offset_ms": 47.9592,
+      "keyset_ms": 0.4133,
+      "ratio": 116.03,
+      "rows_read_by_offset": 500050,
+      "us_per_row_read": 0.0959
+    },
+    {
+      "depth": 999000,
+      "offset_ms": 96.3016,
+      "keyset_ms": 0.3757,
+      "ratio": 256.32,
+      "rows_read_by_offset": 999050,
+      "us_per_row_read": 0.0964
+    }
+  ],
+  "offset_rises_with_depth": true,
+  "offset_cost_is_linear_in_rows_read": true,
+  "per_row_spread": 1.01,
+  "keyset_is_flat": true,
+  "keyset_growth_deep_over_shallow": 1.077,
+  "offset_growth_deep_over_shallow": 33.6,
+  "keyset_spread": 1.93,
+  "deepest_ratio": 256.32,
+  "deepest_offset_ms": 96.3016,
+  "deepest_keyset_ms": 0.3757,
+  "shallow_offset_ms": 0.3153
+}
