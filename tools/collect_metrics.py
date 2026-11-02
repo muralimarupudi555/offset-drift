@@ -17,6 +17,7 @@ CHECKED_DOCUMENTS = (
     "docs/adr/ADR-002-which-rows-were-owed-a-sighting.md",
     "docs/adr/ADR-003-three-measurements-that-were-wrong.md",
     "docs/adr/ADR-004-what-this-cannot-measure.md",
+    "docs/adr/ADR-005-the-gate-could-not-see-itself.md",
 )
 
 

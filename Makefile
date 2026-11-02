@@ -41,6 +41,7 @@ cli:
 	$(PYTHON) tools/capture_cli.py
 
 verify: lint test tables
+	$(PYTHON) tools/check_workflow.py
 	$(PYTHON) tools/check_laws.py
 	$(PYTHON) tools/collect_metrics.py
 	$(PYTHON) tools/check_numbers.py

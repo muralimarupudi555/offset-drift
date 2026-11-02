@@ -187,7 +187,7 @@ src/offset_drift/
   cli.py         exit codes
 experiments/     the three experiments above
 tools/           metric collection, the two checkers, the tables, the transcripts
-docs/adr/        four decision records, including three mistakes and their fixes
+docs/adr/        five decision records, including four mistakes and their fixes
 ```
 
 ## How this was built
